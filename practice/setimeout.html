@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set timeout and clear timeout</title>
+  </head>
+  <body style="background-color: black">
+    <h1 style="font-style: italic; color: aliceblue; text-align: center">
+      what sandy is learning?
+    </h1>
+    <button
+      style="
+        font-style: italic;
+        text-align: center;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: red;
+      "
+      id="stop"
+    >
+      click here to stop
+    </button>
+  </body>
+  <script>
+    const saySandy=function(){
+        console.log("sandy");
+    }
+    const changetext=function(){
+        document.querySelector("h1").innerHTML="SANDY IS LEARNING JS";
+    }
+    const changeme = setTimeout(saySandy, 2000); //here we've given the reference
+    const changeme2 = setTimeout(changetext, 3000); //we've to pass a function or its reference inside the set-timeout
+    document.querySelector("#stop").addEventListener("click",function(){
+
+    })
+  </script>
+</html>

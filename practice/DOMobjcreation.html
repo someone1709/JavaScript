@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | SANDY</title>
+</head>
+<body style="background-color: black; color: azure;">
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector(".parent")
+    console.log(parent)
+    //parent.children joh h yeh actually HTML collection deta h as output,so u need Array.from()
+    //to access array functions
+    console.log(parent.children)
+    const newitem=Array.from(parent.children)
+    newitem.map(l=>l.style.color="red")
+    // console.log(newitem.innerText)-> this is wrong syntax, as now "newitem" is an array so we 
+    //have to use newitem[index] to access the inerhtml/whatever tags
+    newitem.map(l=>console.log(l.innerText))
+    
+</script>
+</html>

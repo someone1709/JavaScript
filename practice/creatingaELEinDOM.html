@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATING ELEMENTS IN document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    
+</body>
+<!-- VERYYYYYYYYYY IMPORTANT FILE -->
+<script>
+// here we're creating a new element h1,h2 etc any
+    const h1doc=document.createElement("h1")
+    // h1doc.innertext="hey there ,very good morning"
+    h1doc.className="heading-tag"
+    h1doc.id=Math.round(Math.random()*10+1)
+    const description=document.createTextNode("hey there,very good morning to all")
+    //coloring des is blunder!!
+    // description.style.color="red"
+    h1doc.appendChild(description)
+    h1doc.style.color="red"
+    document.body.appendChild(h1doc)
+    
+//creating a new ele div
+    const div=document.createElement("div")
+    div.className="container"
+    // div.id=Math.random()*10+1;
+    div.id=Math.round(Math.random()*10+1)
+    div.style.backgroundColor="black"
+    div.setAttribute("title","sandy aur code")
+    // idhar tak creation ka process tha, anything wont appear on the screen, rn div is in the memory
+    //so we're going to write something in div
+    // div.innerText="sandy created a new element using DOM"
+
+    //this is more optimised to write using CHILDNODE concept
+    //CHILDNODE is created inside "document"
+    const newtext=document.createTextNode("sandy created a new element,using childnode")
+    div.appendChild(newtext)
+    //yayy, we've created this new element , now push it to the document ka body
+    document.body.appendChild(div)
+</script>
+</html>

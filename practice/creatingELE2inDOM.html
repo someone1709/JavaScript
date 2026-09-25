@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATING ELE2</title>
+</head>
+<body style="background-color: #1d1c1c;">
+    <ul class="languages" style="color: white; padding: 15px;">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    
+    function addLang(language) {
+        const li=document.createElement("li")
+        li.textContent=`${language}`
+        //either
+        // const newLi=document.querySelector(".languages")
+        // newLi.appendChild(li)
+        // or
+        document.querySelector(".languages").appendChild(li)
+    }
+    addLang("python")
+    addLang("c++")
+    addLang("typescript")
+
+    //EDITTTTTTTTT IN DOM
+    //now to replace the value
+    const select1st=document.querySelector("li:nth-child(1)") //*********//
+    const newLi=document.createElement("li")
+    // select1st.innerHTML="JAVA"  WE CAN ALSO USE THIS
+
+    // instead of this we can use "REPLACE-WITH"
+    newLi.textContent="JAVA"
+    select1st.replaceWith(newLi)
+
+    const anotherLi=document.createElement("li")
+    const select=document.querySelector("li:nth-child(3)")
+    anotherLi.textContent="system design"
+    select.replaceWith(anotherLi)
+
+    //REMOVEEEEEEE IN DOM
+    const lastlang=document.querySelector('li:last-child') //another approach from CSS
+    lastlang.remove()
+</script>
+</html>
